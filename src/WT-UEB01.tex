@@ -89,21 +89,62 @@
 
     \Aufgabe{1}
     \begin{enumerate}[(a)]
-        \item \((A \cup B \cup C)^C\)
+        \item \((A \cup B \cup C)^{\mathrm{c}}\)
         \item \(A \cup B \cup C\)
-        \item \((A \cap \bar{B} \cap \bar{C}) \cup
-                (\bar{A} \cap B \cap \bar{C}) \cup
-                (\bar{A} \cap \bar{B} \cap \bar{C})\)
+        \item \((A \cap B^{\mathrm{c}} \cap C^{\mathrm{c}}) \cup
+                (A^{\mathrm{c}} \cap B \cap C^{\mathrm{c}}) \cup
+                (A^{\mathrm{c}} \cap B^{\mathrm{c}} \cap C^{\mathrm{c}})\)
         \item \((A \cap B) \cup (B \cap C) \cup (C \cap A)\)
-        \item \((A \cap B \cap \bar{C}) \cup
-                (B \cap C \cap \bar{A}) \cup
-                (C \cap A \cap \bar{B})\)
-        \item \((A \cap B \cap \bar{C}) \cup
-        (B \cap C \cap \bar{A}) \cup
-        (C \cap A \cap \bar{B})\)
+        \item \((A \cap B \cap C^{\mathrm{c}}) \cup
+                (B \cap C \cap A^{\mathrm{c}}) \cup
+                (C \cap A \cap B^{\mathrm{c}})\)
+        \item \((A \cap B \cap C^{\mathrm{c}}) \cup
+        (B \cap C \cap A^{\mathrm{c}}) \cup
+        (C \cap A \cap B^{\mathrm{c}})\)
     \end{enumerate}
 
     \Aufgabe{2}
+
+    \Aufgabe{3}
+    \begin{enumerate}[(a)]
+        \item Es beschreibt, dass sowohl das erste als auch das zweite System störungsfrei arbeitet.
+        \item
+        \begin{enumerate}[A:]
+            \item $ S_1 \cap S_2 \cap S_3 $
+            \item $ (S_1 \cap S_2 \cap S_3)^{\mathrm{c}}$
+            \item $ S_1 \cup S_2 \cup S_3 $
+            \item $ (S_1 \cap S_2^{\mathrm{c}} \cap S_3^{\mathrm{c}})
+                    \cup (S_1^{\mathrm{c}} \cap S_2 \cap S_3^{\mathrm{c}})
+                    \cup (S_1^{\mathrm{c}} \cap S_2^{\mathrm{c}} \cap S_3)$
+            \item $ (S_1^{\mathrm{c}} \cap S_2^{\mathrm{c}} \cap S_3^C)^{\mathrm{c}} $
+        \end{enumerate}
+        \item $ \Omega = {(0,0,0), (1,0,0), (0,1,0), (0,0,1)
+        (1,1,0), (1,0,1), (0,1,1), (1,1,1)}$
+        \item A und B sind Elementarereignisse.
+        \item C besteht aus 7 Elementarereignissen, w\"ahrend D aus 3 besteht.
+    \end{enumerate}
+
+    \Aufgabe{4}\\
+    \begin{itemize}
+        \item
+        $ P(B^{\mathrm{c}}) = 1 - P(B) = 1 - 0.45 = 0.55 $ \\
+        $ P(A \cup B) = P(A) + P(B) - P(A \cap B) \Rightarrow P(A \cap B) = P(A) + P(B) - P(A \cup B) $ \\
+        $ P(A \cap B^{\mathrm{c}}) \Leftrightarrow P(A \setminus B) $ \\ \\
+        Lemma 1.5 (Skript):\\ $ \forall A,B \subset \Omega : P(A \setminus B) = P(A) - P(A \cap B) $ \\
+        $ \Rightarrow P(A \cap B^{\mathrm{c}}) = P(A) - P(A \cap B) $ \\
+        $ \Leftrightarrow P(A \cap B^{\mathrm{c}}) = P(A) - (P(A) + P(B) - P(A \cup B)) $ \\
+        $ = 0.25 - (0.25 + 0.45 - 0.5) = 0.05 $ \\
+        \item
+        $ P(A^{\mathrm{c}} \cap B^{\mathrm{c}}) = P((A \cup B)^{\mathrm{c}}) = 1 - (A \cup B) $ \\
+        $ = 1 - 0.5 = 0.5 $
+        \item
+        $ P((A \cap B^{\mathrm{c}}) \cup (A^{\mathrm{c}} \cap B)) = P(A^{\mathrm{c}} \cap B) + P(A^{\mathrm{c}} \cap B) $ \\
+        $ = 0.05 + P(B) - (P(A) + P(B) - P(A \cup B)) = 0.05 - P(A) + P(A \cup B) $ \\
+        $ = 0.5 - 0.2 = 0.3 $
+    \end{itemize}
+
+    \Aufgabe{5}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
